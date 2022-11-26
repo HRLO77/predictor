@@ -13,7 +13,7 @@ predictor.plot((prediction, y_test), ('Predicted', 'Real'))  # plot the predicti
 ## training
 To train your own model on custom data, follow the example below.
 ```python
-pred = predictor(60)  # instantiate a predictor that takes in data split by 60 day intervals
+pred = predictor(60, activation='linear', optimizer='rmsprop')  # instantiate a predictor that takes in data split by 60 day intervals
 pred.reset_model()  # instantiate a tensorflow.keras.Sequential model that takes in 60 day split data
 x_train, y_labels, x_test, y_test = predictor._load_data('./Tor_Ont_Can_temp.csv', last=60, column='temperature', size=60)  # load up training data, labels, and testing data and labels
 # the following division is not necessary, but it keeps data clean.
