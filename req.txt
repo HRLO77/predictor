@@ -1,0 +1,10 @@
+pandas
+numpy
+tensorflow
+keras_tuner
+matplotlib
+keras
+jax
+pyarrow
+fastparquet
+pytables
